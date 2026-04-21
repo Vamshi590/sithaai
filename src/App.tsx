@@ -17,6 +17,7 @@ import RefundPage from '@/pages/RefundPage'
 import ContactPage from '@/pages/ContactPage'
 import ShippingPage from '@/pages/ShippingPage'
 import FAQPage from '@/pages/FAQPage'
+import PricingPage from '@/pages/PricingPage'
 import ScrollToTop from '@/components/ScrollToTop'
 
 export default function App() {
@@ -34,6 +35,7 @@ export default function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/shipping" element={<ShippingPage />} />
         <Route path="/faq" element={<FAQPage />} />
+        <Route path="/pricing" element={<PricingPage />} />
 
         {/* Public preview page — no auth required */}
         <Route path="/preview/:token" element={<PreviewPage />} />
