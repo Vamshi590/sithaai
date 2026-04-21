@@ -5,6 +5,7 @@ import FeaturesSection from "@/components/landing/FeaturesSection";
 import ProcessSection from "@/components/landing/ProcessSection";
 import TestimonialAutomation from "@/components/landing/TestimonialAutomation";
 import TestimonialsSection from "@/components/landing/TestimonialsSection";
+import PricingSection from "@/components/landing/PricingSection";
 import FAQSection from "@/components/landing/FAQSection";
 import FooterSection from "@/components/landing/FooterSection";
 
@@ -32,6 +33,7 @@ export default function LandingPage() {
         <ProcessSection />
         <TestimonialAutomation />
         <TestimonialsSection />
+        <PricingSection />
         <FAQSection />
 
         {/* Final CTA mimicking PatientDesk (White Mode) */}

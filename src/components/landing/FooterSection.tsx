@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logoUrl from "@/assets/logo.png";
 
 const Instagram = (props: any) => (
   <svg
@@ -67,7 +68,7 @@ export default function FooterSection() {
             <Link to="/" className="flex items-center gap-3 mb-10 group">
               <div className="bg-brand-cyan/20 p-2 rounded-xl transition-all group-hover:scale-110">
                 <img
-                  src="/src/assets/logo.png"
+                  src={logoUrl}
                   alt="Sitha"
                   className="h-6 w-6"
                   style={{
@@ -88,10 +89,18 @@ export default function FooterSection() {
               automated, medical-grade marketing.
             </p>
             <div className="flex gap-4">
-              {[Instagram, Twitter, Facebook, Linkedin].map((Icon, i) => (
+              {[
+                { Icon: Instagram, href: "https://instagram.com/sitha.ai", label: "Instagram" },
+                { Icon: Twitter, href: "https://twitter.com/sitha_ai", label: "Twitter" },
+                { Icon: Facebook, href: "https://facebook.com/sitha.ai", label: "Facebook" },
+                { Icon: Linkedin, href: "https://linkedin.com/company/sitha-ai", label: "LinkedIn" },
+              ].map(({ Icon, href, label }) => (
                 <a
-                  key={i}
-                  href="#"
+                  key={label}
+                  href={href}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={label}
                   className="w-12 h-12 rounded-xl bg-slate-50 border border-slate-100 flex items-center justify-center hover:bg-brand-cyan hover:border-brand-cyan hover:text-white text-slate-400 transition-all"
                 >
                   <Icon className="w-5 h-5" />
@@ -106,36 +115,36 @@ export default function FooterSection() {
             </h4>
             <ul className="space-y-4 text-sm font-bold">
               <li>
-                <a
-                  href="#features"
+                <Link
+                  to="/#features"
                   className="hover:text-brand-cyan text-slate-500 transition-colors"
                 >
                   Features
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#process"
+                <Link
+                  to="/#process"
                   className="hover:text-brand-cyan text-slate-500 transition-colors"
                 >
                   Process
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/pricing"
                   className="hover:text-brand-cyan text-slate-500 transition-colors"
                 >
                   Pricing
-                </a>
+                </Link>
               </li>
               <li>
-                <a
-                  href="#"
+                <Link
+                  to="/faq"
                   className="hover:text-brand-cyan text-slate-500 transition-colors"
                 >
-                  Changelog
-                </a>
+                  FAQs
+                </Link>
               </li>
             </ul>
           </div>
@@ -215,10 +224,20 @@ export default function FooterSection() {
             © {new Date().getFullYear()} Sitha-ai. Part of Sitha Health.
           </p>
           <div className="flex gap-8 text-[13px] font-bold text-slate-400">
-            <a href="#" className="hover:text-slate-900 transition-colors">
+            <a
+              href="https://twitter.com/sitha_ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-900 transition-colors"
+            >
               Twitter
             </a>
-            <a href="#" className="hover:text-slate-900 transition-colors">
+            <a
+              href="https://instagram.com/sitha.ai"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-slate-900 transition-colors"
+            >
               Instagram
             </a>
           </div>
